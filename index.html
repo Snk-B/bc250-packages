@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMD BC-250 CachyOS Pacman Repository</title>
+  <style>
+    body {
+      background: #060b13;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card {
+      background: #090e17;
+      border: 1px solid #163640;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 640px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    h1 {
+      color: #00f0a8;
+      font-size: 24px;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    p { color: #94a3b8; font-size: 14px; line-height: 1.6; }
+    pre {
+      background: #04070c;
+      border: 1px solid #102a33;
+      border-radius: 8px;
+      padding: 14px;
+      overflow-x: auto;
+      color: #38bdf8;
+      font-family: monospace;
+      font-size: 13px;
+    }
+    .badge {
+      display: inline-block;
+      background: #0a241e;
+      color: #00f0a8;
+      border: 1px solid #1c5549;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>?? AMD BC-250 Pacman Repository</h1>
+    <p>Official pre-compiled rolling-release package repository for the <b>AMD BC-250 (Sony PS5 Oberon APU)</b> running <b>CachyOS Linux</b>.</p>
+    
+    <p><b>1. Add to <code>/etc/pacman.conf</code>:</b></p>
+    <pre>sudo tee -a /etc/pacman.conf &lt;&lt; 'EOF'
+
+[bc250-cockpit]
+SigLevel = Optional TrustAll
+Server = https://snk-b.github.io/bc250-packages/$arch
+EOF</pre>
+
+    <p><b>2. Install:</b></p>
+    <pre>sudo pacman -Sy bc250-cockpit-pro</pre>
+
+    <p style="margin-top: 24px;">
+      <span class="badge">x86_64</span>
+      <span class="badge">CachyOS Linux</span>
+      <span class="badge">v1.1.1-1</span>
+    </p>
+  </div>
+</body>
+</html>
