@@ -4,24 +4,21 @@ Official pre-compiled rolling-release package repository for the **AMD BC-250 (S
 
 ---
 
-## ?? Quick Setup
+## ?? Quick Setup (Universal for Fish, Bash & Zsh)
 
-Add the repository to `/etc/pacman.conf`:
+Add the official repository to `/etc/pacman.conf`:
 
 ```bash
-sudo tee -a /etc/pacman.conf << 'EOF'
-
-[bc250-cockpit]
-SigLevel = Optional TrustAll
-Server = https://snk-b.github.io/bc250-packages/$arch
-EOF
+printf "\n[bc250-cockpit]\nSigLevel = Optional TrustAll\nServer = https://snk-b.github.io/bc250-packages/\$arch\n" | sudo tee -a /etc/pacman.conf
 ```
 
 Synchronize package databases and install:
 
 ```bash
-sudo pacman -Sy bc250-cockpit-pro
+sudo pacman -Sy --overwrite "*" bc250-cockpit-pro
 ```
+
+*(Note: `--overwrite "*"` ensures a clean migration if you previously installed via manual git clone).*
 
 ---
 
@@ -29,7 +26,7 @@ sudo pacman -Sy bc250-cockpit-pro
 
 | Package | Version | Description |
 | :--- | :--- | :--- |
-| **`bc250-cockpit-pro`** | **1.1.1-1** | Industrial-grade telemetry daemon, standalone Web dashboard & native KDE Plasma 6 Cyber Widgets Suite. |
+| **`bc250-cockpit-pro`** | **1.1.1-2** | Industrial-grade telemetry daemon, GDDR6 memory collector, standalone Web dashboard & native KDE Plasma 6 Cyber Widgets Suite. |
 
 ---
 

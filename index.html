@@ -22,7 +22,7 @@
       border: 1px solid #163640;
       border-radius: 16px;
       padding: 32px;
-      max-width: 640px;
+      max-width: 680px;
       width: 100%;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
@@ -44,6 +44,8 @@
       color: #38bdf8;
       font-family: monospace;
       font-size: 13px;
+      white-space: pre-wrap;
+      word-break: break-all;
     }
     .badge {
       display: inline-block;
@@ -62,21 +64,20 @@
     <h1>?? AMD BC-250 Pacman Repository</h1>
     <p>Official pre-compiled rolling-release package repository for the <b>AMD BC-250 (Sony PS5 Oberon APU)</b> running <b>CachyOS Linux</b>.</p>
     
-    <p><b>1. Add to <code>/etc/pacman.conf</code>:</b></p>
-    <pre>sudo tee -a /etc/pacman.conf &lt;&lt; 'EOF'
-
+    <p><b>1. Add to <code>/etc/pacman.conf</code> (Works on Fish, Bash & Zsh):</b></p>
+    <pre>printf "
 [bc250-cockpit]
 SigLevel = Optional TrustAll
-Server = https://snk-b.github.io/bc250-packages/$arch
-EOF</pre>
+Server = https://snk-b.github.io/bc250-packages/\$arch
+" | sudo tee -a /etc/pacman.conf</pre>
 
     <p><b>2. Install:</b></p>
-    <pre>sudo pacman -Sy bc250-cockpit-pro</pre>
+    <pre>sudo pacman -Sy --overwrite "*" bc250-cockpit-pro</pre>
 
     <p style="margin-top: 24px;">
       <span class="badge">x86_64</span>
       <span class="badge">CachyOS Linux</span>
-      <span class="badge">v1.1.1-1</span>
+      <span class="badge">v1.1.1-2</span>
     </p>
   </div>
 </body>
