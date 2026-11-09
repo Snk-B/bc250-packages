@@ -26,7 +26,7 @@ sudo pacman -Sy --overwrite "*" bc250-cockpit-pro
 
 | Package | Version | Description |
 | :--- | :--- | :--- |
-| **`bc250-cockpit-pro`** | **1.1.1-4** | Industrial-grade telemetry daemon, GDDR6 memory collector, standalone Web dashboard & native KDE Plasma 6 Cyber Widgets Suite. |
+| **`bc250-cockpit-pro`** | **1.1.1-5** | Industrial-grade telemetry daemon, GDDR6 memory collector, standalone Web dashboard & native KDE Plasma 6 Cyber Widgets Suite. |
 
 ---
 
