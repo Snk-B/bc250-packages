@@ -4,7 +4,7 @@ Official pre-compiled rolling-release package repository for the **AMD BC-250 (S
 
 ---
 
-## ?? Quick Setup (Universal for Fish, Bash & Zsh)
+## Quick Setup (Universal for Fish, Bash & Zsh)
 
 Add the official repository to `/etc/pacman.conf`:
 
@@ -22,7 +22,7 @@ sudo pacman -Sy --overwrite "*" bc250-cockpit-pro
 
 ---
 
-## ?? Available Packages
+## Available Packages
 
 | Package | Version | Description |
 | :--- | :--- | :--- |
